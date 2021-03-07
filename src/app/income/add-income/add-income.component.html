@@ -1,0 +1,17 @@
+<div class="p-fluid">
+    <div class="p-field">
+        <label for="amount">Amount</label>
+        <input id="amount" type="text" pInputText> 
+    </div>
+    <div class="p-field">
+        <label for="source">Source</label>
+        <p-dropdown [options]="source" [(ngModel)]="selectedSource" optionLabel="label"></p-dropdown>
+    </div>
+    <div class="p-field">
+        <label for="date">Date</label>
+        <p-calendar [showIcon]="true" [(ngModel)]="date" inputId="date"></p-calendar>
+    </div>
+    <div class="p-field">
+        <p-button icon="pi pi-save" label="Save" ></p-button>
+    </div>
+</div>
