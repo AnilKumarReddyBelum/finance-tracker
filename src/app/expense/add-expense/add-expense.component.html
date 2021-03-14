@@ -1,0 +1,32 @@
+<p-card>
+    <form [formGroup]="expenseForm">
+        <div class="p-formgroup-inline">
+            <div class="p-field">
+                <label for="itemName" class="p-sr-only">Item Name</label>
+                <input id="itemName" placeholder="Item Name" formControlName="itemName" type="text" pInputText> 
+            </div>
+            <div class="p-field">
+                <label for="amount" class="p-sr-only">Amount</label>
+                <input placeholder="Amount" formControlName="amount" id="amount" pInputText>
+               
+            </div>
+            <div class="p-field">
+                <label for="category" class="p-sr-only">Category</label>
+                <p-dropdown formControlName="category" id="category" [options]="categories" 
+                placeholder="Select a Category"
+                    optionLabel="name">
+                </p-dropdown>
+            </div>
+            <div class="p-field">
+                <label for="date" class="p-sr-only">Date</label>
+                <p-calendar formControlName="date" placeholder="Select a Date" dateFormat="dd/mm/yy"></p-calendar>
+               
+            </div>
+            <div class="p-field">
+                <button pButton pRipple type="button" icon="pi pi-save" label="Add New Expense" (click)="save()"></button>         
+            </div>
+            
+        </div>
+    </form>
+    
+</p-card>

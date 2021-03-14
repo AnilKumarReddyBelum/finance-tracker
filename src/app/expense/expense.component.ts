@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api/menuitem';
+import { Expense } from '../shared/model/expense';
+import { AppState } from '../store';
+import { ExpenseState } from '../store/reducers/expense.reducer';
+import { getExpenseList } from '../store/selectors/expense.selector';
 
 @Component({
   selector: 'app-expense',
@@ -10,13 +15,14 @@ export class ExpenseComponent implements OnInit {
 
   items: MenuItem[] = [];
   home!: MenuItem;
-  constructor() { }
+  expenses: Expense[] = []; 
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.items = [
-      {label: 'Expense'}
-      ];
-      this.home = {icon: 'pi pi-home', routerLink: '/'};
+    this.store.select(state => state.expenses).subscribe(data => {      
+      console.log(data.expenses);
+        this.expenses = data.expenses;
+    });
   }
 
 }

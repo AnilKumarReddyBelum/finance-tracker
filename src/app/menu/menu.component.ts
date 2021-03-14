@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {MegaMenuItem, MenuItem} from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-menu',
@@ -9,26 +9,43 @@ import {MegaMenuItem, MenuItem} from 'primeng/api';
 })
 export class MenuComponent implements OnInit {
 
-  items!: MegaMenuItem[];
+  items!: MenuItem[];
   constructor() { }
 
   ngOnInit(): void {
     this.items = [
       {
-        label: 'Account',
+        label: 'Account',        
         routerLink: ['/account']
       },
       {
           label: 'Income',
-          routerLink: ['/income']         
+          items: [{
+            label: 'New',
+            routerLink: ['/income/new']
+          },{
+            label: 'View',
+            routerLink: ['/income']  
+          }]                
       },
       {
           label: 'Expense',
-          routerLink: ['/expense']          
+          items: [{
+            label: 'New',
+            routerLink: ['/expense/new']              
+          },{
+            label: 'View',
+            routerLink: ['/expense']  
+          }]          
       },
       {
         label: 'Bills',
-        routerLink: ['/bills']
+        items: [{
+          label: 'New'            
+        },{
+          label: 'View',
+          routerLink: ['/bills']  
+        }]
       },
       {
         label: 'Reports',

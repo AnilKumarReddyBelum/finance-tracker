@@ -133,5 +133,8 @@
       }
     }
   },
-  "defaultProject": "my-fin-tracker"
+  "defaultProject": "my-fin-tracker",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

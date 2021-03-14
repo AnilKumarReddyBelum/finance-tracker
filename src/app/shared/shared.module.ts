@@ -10,6 +10,10 @@ import { CalendarModule } from 'primeng/calendar';
 import {DialogService, DynamicDialogModule} from 'primeng/dynamicdialog';
 import {MegaMenuModule} from 'primeng/megamenu';
 import { ChartModule } from 'primeng/chart';
+import {MenubarModule} from 'primeng/menubar';
+import {CardModule} from 'primeng/card';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {TableModule} from 'primeng/table';
 
 
 @NgModule({
@@ -26,7 +30,11 @@ import { ChartModule } from 'primeng/chart';
     CalendarModule,
     DynamicDialogModule,
     MegaMenuModule,
-    ChartModule
+    ChartModule,
+    MenubarModule,
+    CardModule,
+    InputNumberModule,
+    TableModule
   ],
   providers: [
     DialogService
@@ -43,7 +51,11 @@ import { ChartModule } from 'primeng/chart';
     CalendarModule,
     DynamicDialogModule,
     MegaMenuModule,
-    ChartModule
+    ChartModule,
+    MenubarModule,
+    CardModule,
+    InputNumberModule,
+    TableModule
   ]
 })
 export class SharedModule { 
