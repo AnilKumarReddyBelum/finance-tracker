@@ -6,7 +6,8 @@ const routes: Routes = [
   { path: 'income', loadChildren: () => import('./income/income.module').then(m => m.IncomeModule) },
   { path: 'expense', loadChildren: () => import('./expense/expense.module').then(m => m.ExpenseModule) },
   { path: 'bills', loadChildren: () => import('./bills/bills.module').then(m => m.BillsModule) },
-  { path: 'reports', loadChildren: () => import('./reports/reports.module').then(m => m.ReportsModule) }
+  { path: 'reports', loadChildren: () => import('./reports/reports.module').then(m => m.ReportsModule) },
+  {path: 'groceries', loadChildren: () => import('./groceries/groceries.module').then(m => m.GroceriesModule)}
 ];
 
 @NgModule({

@@ -7,19 +7,22 @@ import {
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
 import { expenseReducer, ExpenseState, initialExpenseState } from './reducers/expense.reducer';
+import {groceryReducer, GroceryState, initialGroceriesState} from './reducers/grocery.reducer';
 
 
 export interface AppState {
-  expenses: ExpenseState
+  expenses: ExpenseState;
+  groceries: GroceryState;
 }
 
 export const initialAppState: AppState = {
-  expenses: initialExpenseState
+  expenses: initialExpenseState,
+  groceries: initialGroceriesState
 }
 
 export const reducers: ActionReducerMap<AppState, any> = {
-  expenses: expenseReducer
-
+  expenses: expenseReducer,
+  groceries: groceryReducer
 };
 
 

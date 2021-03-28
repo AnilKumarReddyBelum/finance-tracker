@@ -1,0 +1,19 @@
+<p-card>
+  <form [formGroup]="groceryForm">
+    <div class="p-formgroup-inline">
+      <div class="p-field">
+        <label for="name" class="p-sr-only">Grocery Name</label>
+        <input id="name" placeholder="Grocery Name" formControlName="name" type="text" pInputText>
+      </div>
+      <div class="p-field">
+        <label for="price" class="p-sr-only">Price</label>
+        <input placeholder="Price" formControlName="price" id="price" pInputText>
+      </div>
+      <div class="p-field">
+        <button pButton pRipple type="button" icon="pi pi-save" label="Add New Expense" (click)="save()"></button>
+      </div>
+
+    </div>
+  </form>
+
+</p-card>

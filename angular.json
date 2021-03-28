@@ -135,6 +135,7 @@
   },
   "defaultProject": "my-fin-tracker",
   "cli": {
-    "defaultCollection": "@ngrx/schematics"
+    "defaultCollection": "@ngrx/schematics",
+    "analytics": false
   }
 }

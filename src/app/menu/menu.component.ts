@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {
-        label: 'Account',        
+        label: 'Account',
         routerLink: ['/account']
       },
       {
@@ -25,32 +25,42 @@ export class MenuComponent implements OnInit {
             routerLink: ['/income/new']
           },{
             label: 'View',
-            routerLink: ['/income']  
-          }]                
+            routerLink: ['/income']
+          }]
       },
       {
           label: 'Expense',
           items: [{
             label: 'New',
-            routerLink: ['/expense/new']              
+            routerLink: ['/expense/new']
           },{
             label: 'View',
-            routerLink: ['/expense']  
-          }]          
+            routerLink: ['/expense']
+          }]
       },
       {
         label: 'Bills',
         items: [{
-          label: 'New'            
+          label: 'New'
         },{
           label: 'View',
-          routerLink: ['/bills']  
+          routerLink: ['/bills']
         }]
       },
       {
         label: 'Reports',
         routerLink: ['/reports']
-      }
+      },
+      {
+        label: 'Groceries',
+        items: [{
+            label: 'Add',
+            routerLink: ['/groceries/add']
+          },{
+            label: 'View',
+            routerLink: ['/groceries']
+          }
+        ]}
   ];
   }
 
